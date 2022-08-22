@@ -259,8 +259,10 @@ img {
 
     .products__container {
       align-items: center;
-      grid-template-columns: repeat(4, 1fr);
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
       grid-gap: var(--mb-2) var(--mb-2);
+      transition: all 0.3s ease;
     }
 
     .product__cart {
