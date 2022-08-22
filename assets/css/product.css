@@ -117,7 +117,7 @@ img {
   margin-bottom: var(--mb-2);
 }
 
-.bg__pattern {
+/* .bg__pattern {
   position: absolute;
   background: url("../img/background__pattern.png");
   background-repeat: no-repeat;
@@ -140,7 +140,7 @@ img {
 .collection__pattern {
   top: 0;
   left: -10px;
-}
+} */
 
 /*===== LAYOUT =====*/
 .bd-grid {
@@ -150,6 +150,24 @@ img {
   width: calc(100% - 3rem);
   margin-left: var(--mb-3);
   margin-right: var(--mb-3);
+}
+
+/*BUTTONS*/
+
+.button {
+  display: inline-block;
+  text-align: center;
+  border: none;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  padding: 1rem;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi);
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
 }
 
 /*===== NAV =====*/
@@ -228,6 +246,56 @@ img {
       font-size: 1.5rem;
       cursor: pointer;
     }
+
+    /*===== Product Section =====*/
+    .category__button {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--mb-2);
+      margin-bottom: var(--mb-4);
+    }
+
+    .products__container {
+      align-items: center;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: var(--mb-2) var(--mb-2);
+    }
+
+    .product__cart {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--gray-color);
+      transition: all 0.3s ease;
+      padding-top: var(--mb-1);
+    }
+
+    .product__cart:hover {
+      transform: translateY(-10px);
+    }
+
+    .product__img {
+      width: 296px;
+    }
+
+    .product__data {
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      margin-bottom: var(--mb-1);
+    }
+
+    .product__name {
+      text-transform: uppercase;
+    }
+
+    .product__price {
+      color: var(--dark-color-light);
+      font-weight: var(--font-semi);
+    }
     
     /*=== Show menu ===*/
     .show {
@@ -237,7 +305,20 @@ img {
     .active {
       color: var(--first-color);
     }
-    
+
+    .add__to-cart {
+      width: 100%;
+      background-color: var(--first-color);
+      color: var(--white-color);
+      padding: var(--mb-1);
+      text-align: center;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .add__to-cart:hover {
+      background-color: var(--first-color-alt);
+    }
 
     /* ===== MEDIA QUERIES=====*/
     @media screen and (min-width: 768px){
