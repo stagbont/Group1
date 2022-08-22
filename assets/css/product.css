@@ -198,10 +198,30 @@ img {
     .nav__logo {
       font-weight: var(--font-bold);
     }
+
+    .nav__cart-link {
+      position: relative;
+    }
     
     .nav__cart {
       font-size: 1.5rem;
       margin-right: var(--mb-2);
+    }
+
+    .cart__num {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .75rem;
+      font-weight: 400;
+      top: -12px;
+      right: 5px;
+      width: 20px;
+      height: 20px;
+      background-color: var(--first-color-alt);
+      color: var(--white-color);
+      border-radius: 50%;
     }
     
     .nav__toggle {
@@ -218,3 +238,53 @@ img {
       color: var(--first-color);
     }
     
+
+    /* ===== MEDIA QUERIES=====*/
+    @media screen and (min-width: 768px){
+      body {
+        margin: 0;
+      }  
+    
+      .section-all {
+        margin-bottom: var(--mb-4);
+      }
+    
+      .nav {
+        height: calc(var(--header-height) + 1rem);
+        align-items: center;
+        justify-content: initial;
+      }
+    
+      .nav__menu {
+        margin-left: auto;
+      }
+    
+      .nav__list {
+        display: flex;
+        margin-right: var(--mb-4);
+      }
+    
+      .nav__item {
+        margin-left: var(--mb-4);
+        margin-bottom: 0;
+      }
+    
+      .nav__toggle {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: 380px) {
+      .bd-grid {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    
+      .home__data {
+        padding-left: 7rem;
+      }
+    
+      .home__img {
+        right: 15%;
+      }
+    }
